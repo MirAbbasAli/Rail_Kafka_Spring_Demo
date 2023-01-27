@@ -6,6 +6,7 @@
     <modules>
         <module>rail_sender</module>
         <module>rail_receiver</module>
+        <module>rail_consumer_record</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
