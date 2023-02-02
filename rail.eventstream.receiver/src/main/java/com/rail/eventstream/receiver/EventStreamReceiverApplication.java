@@ -15,6 +15,6 @@ public class EventStreamReceiverApplication {
 
     @KafkaListener(id="RC2D_2", topics="Rail_C_To_D_Brake_Warning")
     public void listenToTopic2(ConsumerRecord<String, Long> message){
-        System.out.println("Receiving "+message.key()+" as "+message.value()+" %.");
+        System.out.println("Receiving "+message.value()+" % of Break efficiency "+message.key()+ " times");
     }
 }

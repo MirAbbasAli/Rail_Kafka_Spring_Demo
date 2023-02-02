@@ -32,7 +32,7 @@ public class EventStreamSenderApplication {
     @Bean
     public ApplicationRunner sendMessage(KafkaTemplate<String, String> template){
         return args -> {
-            for(int i=1;i<=500;i++){
+            for(int i=1;i<101;i++){
                 String speed=String.valueOf(Math.round(Math.random()*1000));
                 String brakeData=String.valueOf(Math.round(Math.random()*100));
                 template.send("Rail_C_To_D", "Speed", speed);
